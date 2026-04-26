@@ -1,0 +1,12 @@
+programming questions:
+Q1. write a program for swapping two numbers using a third variable
+Q2. write a program to count the number of vowels in a string
+Q3. write a program to chech whether the number entered by the user is prime or         
+    not
+Q4. write a program to calculate amstrong number  and that cube should be equal  
+    to original number
+Q.5 write a program to merge two list
+Q6. write a program to create an atm system where a person can check balance, 
+    deposit and withdraw
+Q7. writh password strength checker password length, upper case, lower case,     
+    special character

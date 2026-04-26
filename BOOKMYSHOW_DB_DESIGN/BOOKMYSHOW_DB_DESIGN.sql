@@ -314,6 +314,28 @@ INSERT INTO booking_offers (booking_id, offer_id, discount_applied) VALUES
 (2, 2,   80.00),  -- NEWUSER20 on booking 2
 (3, 3,   75.00);  -- PAYTM15 on booking 3
 
+SELECT * FROM booked_seats_view;  -- remove double booking problem
+
+-- payment failure handling via transaction block
+START TRANSACTION;
+
+INSERT INTO bookings (user_id, show_id, total_amount)
+VALUES (1, 1, 500);
+
+-- Simulate failure
+ROLLBACK;
+
+--  show cancellation
+UPDATE shows
+SET status = 'CANCELLED'
+WHERE show_id = 1;
+
+-- dublicate payment prevention - demo
+
+-- concurrency issue
+START TRANSACTION;
+SELECT * FROM seats WHERE seat_id = 1;
+
 -- ============================================================
 --  SAMPLE QUERIES
 -- ============================================================

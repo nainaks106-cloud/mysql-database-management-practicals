@@ -368,3 +368,6 @@ CREATE TABLE Review (
 );
 
 show tables;
+show columns from review;
+
+ 
