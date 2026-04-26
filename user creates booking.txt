@@ -1,5 +1,0 @@
-user creates booking
-booking is linked to show
-shows belongs screen
-screen belongs to venues 
-venue belongs to city
